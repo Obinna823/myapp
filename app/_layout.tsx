@@ -13,10 +13,10 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
+        <Stack.Screen name="(welcome)" options={{headerShown:false}}/>
+        <Stack.Screen name="(dashboard)" options={{headerShown:false}}/>
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
